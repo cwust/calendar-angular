@@ -1,0 +1,20 @@
+<div class="container" >
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="login-div">
+            <h1>My Calendar</h1>
+            <h2>Angular Version</h2>
+            <span class="p-float-label field">
+                <input type="text" pInputText formControlName="username"> 
+                <label>Username</label>
+            </span>
+            <mycal-validation-message controlName="username"></mycal-validation-message>
+            <span class="p-float-label field">
+                <p-password formControlName="password" styleClass="p-input-icon-right p-password" [toggleMask]="true" [feedback]="false"></p-password>
+                <label>Password</label>
+            </span>
+            <mycal-validation-message controlName="password"></mycal-validation-message>
+            <button pButton type="submit" class="login-button p-button-rounded" label="Login"></button>
+        </div>
+    </form>
+</div>
+
